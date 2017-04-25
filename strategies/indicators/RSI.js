@@ -17,6 +17,11 @@ var Indicator = function(settings) {
 Indicator.prototype.update = function(candle) {
   var currentClose = candle.close;
 
+  /*console.log(candle.start._d);
+  console.log(candle.open);
+  console.log(candle.close);
+  console.log('----------------------------');
+*/
   if(currentClose > this.lastClose) {
     this.u = currentClose - this.lastClose;
     this.d = 0;
